@@ -1,7 +1,7 @@
 # The MYASM instruction set
 <center><img src="MYASM.png" alt="drawing" width="200"/>  
 
-*MYASM : your asm*
+*MYASM : your ASM*
 </center>  
 
 ### How to read
