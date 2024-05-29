@@ -223,7 +223,9 @@ while end == False:
                                 break
 
             # oh no duplicate code !!!  
-            # actually don't care              
+            # actually don't care, because whenever we want to tweak the logic 
+            # of keywords like these, it's easier and cleaner to do it on a 
+            # per keyword basis instead of creating cases in a big function.              
             if logic == "ISEQ":
                 if left_operand == right_operand:
                     for adress in range(disk.size()):

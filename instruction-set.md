@@ -20,8 +20,8 @@ MYASM being a language working on a virtual disk, all MYASM programs need to spe
 It is considered good practice to leave a blank line between the `disk size` instruction and the actual program.
 
 ## instruction set
-##### note
-all MYASM instructions begin with 100. meaning that all data cells that contain a data block **beginning** with 100 are instructions. Bear in mind that 100 alone will be a value. 
+##### note :
+all MYASM instructions are keywords that live alone in their cell. no other content should ever be present with a keyword inside of a cell.
 
 ### Flag `FLAG <name>` (0)
 Probably one of the most important instruction in myasm : it allows you to create a flag at the location of the instruction. See it as some kind of exit portal that works hand in hand with it's brother `Goto`

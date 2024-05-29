@@ -1,5 +1,6 @@
 # MYASM
-A small python-driven virtual asm
+A small python-driven virtual asm that works on a python-driven virtual disk.  
+Inspired by BASIC and LMC.
 
 ## Usage
 Use `python myasm.py yourprogram.myasm`
