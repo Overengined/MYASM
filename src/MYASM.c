@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
-#include <cleaner.c>
+#include "cleaner.c"
 
 int main(int argc, char const *argv[])
 {
