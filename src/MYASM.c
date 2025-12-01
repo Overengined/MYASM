@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
+#include <cleaner.c>
 
 int main(int argc, char const *argv[])
 {
@@ -35,6 +36,7 @@ int main(int argc, char const *argv[])
     char* file_content = (char*)malloc(file_size + 1);
     fread(file_content, 1, file_size, file);
     file_content[file_size] = '\0';
+    fclose(file);
 
     // prove that file_content is indeed a string
     if (verbose == true) {
