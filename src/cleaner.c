@@ -1,6 +1,7 @@
 #include <string.h>
 #include "sds.h"
 #include <stdbool.h>
+#include <stdlib.h>
 
 /**
      * This function collapses multiple consecutive spaces in the string s and all lines beginning with #

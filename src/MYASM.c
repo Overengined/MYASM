@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
-#include "cleaner.c"
+#include "cleaner.h"
 
 extern bool verbose;
+bool verbose = false;
 int main(int argc, char const *argv[])
 {
-    bool verbose = false;
     if (argc == 1 || argc > 3) {
         printf("MYASM ORDERS TERM : usage is \n myasm <file name> -v");
         return 1;

@@ -1,5 +1,6 @@
 #include <stdlib.h> 
 #include "MYASM.h"
+#include <stdio.h>
 
 struct memger {
     long long int* memory;
@@ -9,7 +10,7 @@ struct memger {
 struct memger* newmem(long long int size) {
     // initialise a memger struct, memory points to an array to hold 'size' integers
     struct memger* m = (struct memger*) malloc(sizeof(struct memger));
-    m->memory = (int*) malloc(size * sizeof(int));
+    m->memory = (long long int*) malloc(size * sizeof(int));
     m->size = size;
     return m;
 }
