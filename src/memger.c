@@ -31,7 +31,7 @@ int setmem(struct memger* m, long long int index, int value) {
     // set the integer at memory[index] to value
     if (index < 0 || index >= m->size) {
         // out of bounds
-        if (verbose) {
+        if (verbose == true) {
             printf("[MEMGER]>[TERM]: setmem index %lld out of bounds (size %lld)\n", index, m->size);
         }
         return 1;
