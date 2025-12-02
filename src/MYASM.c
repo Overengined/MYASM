@@ -4,11 +4,12 @@
 #include <string.h>
 #include "cleaner.c"
 
+extern bool verbose;
 int main(int argc, char const *argv[])
 {
     bool verbose = false;
     if (argc == 1 || argc > 3) {
-        printf("TERM : usage is \n myasm <file name> -v");
+        printf("MYASM ORDERS TERM : usage is \n myasm <file name> -v");
         return 1;
     };
 

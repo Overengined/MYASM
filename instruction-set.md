@@ -11,9 +11,9 @@ all entries will contain the name fo the function followed by its code represent
 
 ## special instructions
 
-### first instruction : `disk size` (0)
+### first instruction : `memory size` (0)
 
-MYASM being a language working on a virtual disk, all MYASM programs need to specify in their first instrution the size of vdisk they want to have at their disposal. typically, a value of 10000 should be more than enough while still being supported by most computers. since this first instruction is mandoatory, there is no prefix mechanic, the size is the only thing to write.
+MYASM being a language working on a virtual memory slot, all MYASM programs need to specify in their first instrution the size of slot they want to have at their disposal. typically, a value of 10000 should be more than enough while still being supported by most computers. since this first instruction is mandatory, there is no prefix mechanic, the size is the only thing to write. Bear in mind that actual adresses invoked do matter, as the upper bound of your allowed adress range will be the memry size you chose.
 
 #### example
 
