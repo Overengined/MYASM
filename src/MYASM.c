@@ -9,14 +9,14 @@ bool verbose = false;
 int main(int argc, char const *argv[])
 {
     if (argc == 1 || argc > 3) {
-        printf("MYASM ORDERS TERM : usage is \n myasm <file name> -v");
+        printf("[MYASM]>[TERM] : usage is myasm <file name> -v");
         return 1;
     };
 
-    printf(argv[2]);
+    //printf(argv[2]);
     
     if (argc == 3 && strcmp(argv[2], "-v") == 0) {
-        printf("MYASM : version 2.0 \n");
+        printf("[MYASM]>[INFO] : version 2.0 \n");
         verbose = true;
     }
 
@@ -26,7 +26,7 @@ int main(int argc, char const *argv[])
 
     // Check if file opened successfully
     if (file == NULL) {
-        printf("TERM : Could not open file %s\n", argv[1]);
+        printf("[MYASM]>[TERM] : Could not open file %s\n", argv[1]);
         return 1;
     }
 

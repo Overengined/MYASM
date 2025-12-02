@@ -20,7 +20,7 @@ int getmem(struct memger* m, long long int index) {
     if (index < 0 || index >= m->size) {
         // out of bounds
         if (verbose) {
-            printf("MEMGER RECOMMENDS TERM: getmem index %lld out of bounds (size %lld)\n", index, m->size);
+            printf("[MEMGER]>[TERM]: getmem index %lld out of bounds (size %lld)\n", index, m->size);
         }
         return 1;
     }
@@ -32,7 +32,7 @@ int setmem(struct memger* m, long long int index, int value) {
     if (index < 0 || index >= m->size) {
         // out of bounds
         if (verbose) {
-            printf("MEMGER RECOMMENDS TERM: setmem index %lld out of bounds (size %lld)\n", index, m->size);
+            printf("[MEMGER]>[TERM]: setmem index %lld out of bounds (size %lld)\n", index, m->size);
         }
         return 1;
     }
