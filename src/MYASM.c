@@ -41,9 +41,13 @@ int main(int argc, char const *argv[])
 
     // prove that file_content is indeed a string
     if (verbose == true) {
-    printf("File content:\n%s\n", file_content);
+        printf("File content:\n%s\n", file_content);
     };
 
+    char *prepared_content = prepare(file_content, verbose);
 
+    if (verbose == true) {
+        printf("Prepared content content:\n%s\n", prepared_content);
+    };
     return 0;
 }

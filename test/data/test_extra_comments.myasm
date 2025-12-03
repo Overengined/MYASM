@@ -1,0 +1,17 @@
+# This programm was made by someone
+# Another one
+10000
+
+  WRIT 30 100
+WRIT  20 101 # test
+IFTH READ 100 ISGT READ 101 1
+# Testing
+DSPL 0
+ENDP
+
+  # Hello world
+
+# Hello world
+FLAG 1# Helow world
+DSPL 1    # Hello world
+ENDP
