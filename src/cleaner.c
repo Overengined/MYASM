@@ -37,13 +37,6 @@ bool isWhiteSpace(char c) {
      * @return otp : processed string with collapsed spaces an removed comments
      */
 char* prepare(char *s, bool verbose) {
-    
-    char *read = s;
-    
-    //char *otp = (char*)malloc(strlen(s) + 1); // allocate memory for output string
-    sds otp = sdsempty(); // use sds for dynamic string handling
-    char *write = otp;
-
     sds content = sdsnew(s);
     long long int len = strlen(content);
 
@@ -66,7 +59,7 @@ char* prepare(char *s, bool verbose) {
             }
             if (previousIsSpace) {
                 if (verbose) {
-                    printf("[CLEANER]>[INFO]: skipping white space\n%>>>lld\n", readIndex);
+                    printf("[CLEANER]>[INFO]: skipping white space\n>>>%lld\n", readIndex);
                 }
 
                 // Removes spaces at the end
