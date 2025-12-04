@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 #include <string.h>
 #include "cleaner.h"
 
-extern bool verbose;
-bool verbose = false;
+int verbose = 0;
 int main(int argc, char const *argv[])
 {
     if (argc == 1 || argc > 3) {
@@ -17,7 +15,7 @@ int main(int argc, char const *argv[])
     
     if (argc == 3 && strcmp(argv[2], "-v") == 0) {
         printf("[MYASM]>[INFO] : version 2.0 \n");
-        verbose = true;
+        verbose = 1;
     }
 
     FILE* file;
@@ -40,8 +38,8 @@ int main(int argc, char const *argv[])
     fclose(file);
 
     // prove that file_content is indeed a string
-    if (verbose == true) {
-    printf("File content:\n%s\n", file_content);
+    if (verbose) {
+        printf("File content:\n%s\n", file_content);
     };
 
 
