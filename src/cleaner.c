@@ -15,7 +15,6 @@ char* prepare(char *s) {
     
     //char *otp = (char*)malloc(strlen(s) + 1); // allocate memory for output string
     sds otp = sdsempty(); // use sds for dynamic string handling
-    char *write = otp;
 
     sds content = sdsnew(s);
 
@@ -26,5 +25,50 @@ char* prepare(char *s) {
         printf("[CLEANER]>[INFO]: original string:\n%s\n", content);
     }
 
+    // for loop for all the chars in the string
+    long long i = 0;
+    S0 :
+    if (i >= len) goto END;
+    if (i < len && content[i] == ' ') {
+        sdscatlen(otp, " ", 1);
+        i ++;
+        goto E1;
+    }
+    if (i < len && content[i] == '#') {
+        i ++;
+        goto C1;
+    }
+    if (i < len && content[i] != ' ' && content[i] != '#') {
+        sdscatlen(otp, &content[i], 1);   // bot insisted on using catlen instaed of cat, don't ask me why 
+        i ++;
+        goto S0;
+    }
+    E1 :
+    if (i >= len) goto END;
+    if (i < len && content[i] == ' ') {
+        i ++;
+        goto E1;
+    }
+    if (i < len && content[i] == '#') {
+        i ++;
+        goto C1;
+    }  
+    C1 :
+    if (i >= len) goto END;
+    if (i < len && content[i] != '\n') {
+        i ++;
+        goto C1;
+    }
+    if (i < len && content[i] == '\n') {
+        sdscat(otp, "\n");
+        i ++;
+        goto S0;
+    }
+END:
+    return otp;
 }
+
+
+
+
     
