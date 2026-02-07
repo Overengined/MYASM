@@ -30,7 +30,7 @@ char* prepare(char *s) {
     S0 :
     if (i >= len) goto END;
     if (i < len && content[i] == ' ') {
-        sdscatlen(otp, " ", 1);
+        sdscat(otp, " ");
         i ++;
         goto E1;
     }
